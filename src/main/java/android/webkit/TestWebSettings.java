@@ -21,6 +21,7 @@ public class TestWebSettings extends WebSettings {
   private boolean geolocationEnabled = false;
   private boolean javaScriptEnabled = false;
   private boolean javaScriptCanOpenWindowAutomatically = false;
+  private boolean displayZoomControls = true;
   private boolean lightTouchEnabled = false;
   private boolean loadWithOverviewMode = false;
   private boolean needInitialFocus = false;
@@ -300,5 +301,15 @@ public class TestWebSettings extends WebSettings {
   @Implementation
   public boolean getJavaScriptCanOpenWindowsAutomatically() {
     return this.javaScriptCanOpenWindowAutomatically;
+  }
+
+  @Implementation
+  public void setDisplayZoomControls(boolean displayZoomControls) {
+	  this.displayZoomControls = displayZoomControls;
+  }
+
+  @Implementation
+  public boolean getDisplayZoomControls() {
+	  return this.displayZoomControls;
   }
 }

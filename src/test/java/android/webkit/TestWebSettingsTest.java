@@ -253,4 +253,16 @@ public class TestWebSettingsTest {
     webSettings.setJavaScriptCanOpenWindowsAutomatically(false);
     assertThat(webSettings.getJavaScriptCanOpenWindowsAutomatically()).isFalse();
   }
+
+  @Test
+  public void testSetDisplayZoomControlsIsTrue() throws Exception {
+    webSettings.setDisplayZoomControls(true);
+    assertThat(webSettings.getDisplayZoomControls()).isTrue();
+  }
+
+  @Test
+  public void testSetDisplayZoomControlsIsFalse() throws Exception {
+    webSettings.setDisplayZoomControls(false);
+    assertThat(webSettings.getDisplayZoomControls()).isFalse();
+  }
 }
